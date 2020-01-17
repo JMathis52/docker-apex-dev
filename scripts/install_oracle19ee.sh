@@ -86,7 +86,7 @@ gosu oracle bash -c "${ORACLE_HOME}/bin/dbca -silent -createDatabase \
   -systemPassword ${PASS} \
   -emConfiguration NONE \
   -datafileDestination ${ORACLE_BASE}/oradata/ \
-  -customScripts /files/c_role_fa_user.sql,/files/c_role_hines_resource.sql,/files/c_dbs_devl2.sql,/files/c_usr_corpjrn.sql,/files/c_usr_corpprod.sql,/files/c_usr_cp.sql,/files/c_usr_fa.sql,/files/c_usr_vetsnet.sql
+  -customScripts /files/c_role_fa_user.sql,/files/c_role_hines_resource.sql,/files/c_dbs_devl.sql,/files/c_usr_corpjrn.sql,/files/c_usr_corpprod.sql,/files/c_usr_cp.sql,/files/c_usr_fa.sql,/files/c_usr_vetsnet.sql
   -characterSet ${CHARACTER_SET} \
   -totalMemory $DBCA_TOTAL_MEMORY"
 
