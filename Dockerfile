@@ -1,6 +1,6 @@
 FROM oraclelinux:latest
 
-LABEL "Daniel Hochleitner"=<dhochleitner@posteo.de>
+LABEL "Jerrod Mathis"=<jerrodmathis95@gmail.com>
 
 # environment variables
 ENV INSTALL_APEX=true \

@@ -28,7 +28,7 @@ Complete the following steps to create a new container:
 1. **Clone or Download the Github Repository to your local Machine**
 
 ```bash
-git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
+git clone https://github.com/JMathis52/docker-apex-dev.git
 ```
 
 2. **Download missing Software Components**
@@ -99,9 +99,15 @@ docker build -t db-apex-dev-image .
 5. **Run the Docker Container**
 
 ```bash
-docker run -d --name <your-docker-container-name> -p <local-ssh-port>:22 -p <local-http-port>:8080 -p <local-db-listener-port>:1521 -v /dev/shm --tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g <your-docker-image-name>
+docker run -d --name <your-docker-container-name> \
+-p <local-ssh-port>:22 -p <local-http-port>:8080 -p <local-db-listener-port>:1521 \
+-v /dev/shm \
+--tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g <your-docker-image-name>
 # e.g
-docker run -d --name db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 -v /dev/shm --tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g db-apex-dev-image
+docker run -d --name db-apex-dev-container \
+-p 2222:22 -p 8080:8080 -p 1521:1521 \
+-v /dev/shm \
+--tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g db-apex-dev-image
 ```
 
 *Note: /dev/shm should be equal the size of allocated Memory to the Database. /dev/shm must also be mounted as tmpfs.*
@@ -130,7 +136,7 @@ Property | Value
 -------- | -----
 Workspace | INTERNAL
 User | ADMIN
-Password | OrclAPEX1999!
+Password | Oradoc1!
 
 *If APEX Office Print is installed (INSTALL_AOP=true)*
 
@@ -138,7 +144,7 @@ Property | Value
 -------- | -----
 Workspace | AOP
 User | ADMIN
-Password | OrclAPEX1999!
+Password | Oradoc1!
 
 ### SQL Developer Web
 
